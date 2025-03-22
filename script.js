@@ -5,8 +5,6 @@ const resources = {
       translation: {
         headline: "원서공부, 스마트하게",
         subheadline: "원서공부, 어디서부터 시작할지 막막하셨죠?",
-        cta_ios: "iOS 앱 다운로드",
-        cta_android: "Android 앱 다운로드",
         features_title: "피카북은 이렇게 도와줘요",
         feature_1_title: "사진만 있으면 바로 번역",
         feature_1_desc1: "책, 노트, 간판… 어디서든 사진을 찍으면 즉시 번역!",
@@ -28,8 +26,6 @@ const resources = {
       translation: {
         headline: "Smart Foreign Language Reading",
         subheadline: "Wondering where to start with foreign language reading?",
-        cta_ios: "Download iOS App",
-        cta_android: "Download Android App",
         features_title: "How Pikabook Helps You",
         feature_1_title: "Instant Translation with Just a Photo",
         feature_1_desc1: "Books, notes, signs... Take a photo anywhere for immediate translation!",
@@ -51,8 +47,6 @@ const resources = {
       translation: {
         headline: "智能外语阅读",
         subheadline: "不知道从哪里开始外语阅读？",
-        cta_ios: "下载 iOS 应用",
-        cta_android: "下载 Android 应用",
         features_title: "Pikabook 如何帮助您",
         feature_1_title: "只需一张照片即可立即翻译",
         feature_1_desc1: "书籍、笔记、标志...在任何地方拍照即可立即翻译！",
@@ -84,10 +78,6 @@ const resources = {
     document.getElementById("headline").innerHTML = i18next.t("headline");
     document.getElementById("subheadline").innerHTML = i18next.t("subheadline");
     document.getElementById("features_title").innerHTML = i18next.t("features_title");
-    
-    // CTA 버튼
-    document.getElementById("cta-ios").innerHTML = i18next.t("cta_ios");
-    document.getElementById("cta-android").innerHTML = i18next.t("cta_android");
     
     // 다운로드 섹션
     if (document.getElementById("download_title")) {
