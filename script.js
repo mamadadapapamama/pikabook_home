@@ -19,7 +19,9 @@ const resources = {
         feature_3_desc2: "머릿속에 정리될 때까지 반복 학습해요",
         feature_4_title: "내 방식대로 정리해 손쉽게 복습하기!",
         feature_4_desc1: "챕터별, 일일 학습별 등 내 방식대로 하나의 노트로 정리해요",
-        feature_4_desc2: "언제든 다시 볼 수 있어요"
+        feature_4_desc2: "언제든 다시 볼 수 있어요",
+        download_title: "지금 바로 피카북을 다운로드하세요",
+        download_subtitle: "언제 어디서나 외국어 읽기를 더 스마트하게"
       }
     },
     en: {
@@ -40,7 +42,9 @@ const resources = {
         feature_3_desc2: "Repeat learning until it's organized in your head",
         feature_4_title: "Organize for Easy Review in Your Own Way!",
         feature_4_desc1: "Organize into a single note by chapter, daily learning, etc.",
-        feature_4_desc2: "Available to review anytime"
+        feature_4_desc2: "Available to review anytime",
+        download_title: "Download Pikabook Now",
+        download_subtitle: "Smarter foreign language reading anytime, anywhere"
       }
     },
     zh: {
@@ -61,7 +65,9 @@ const resources = {
         feature_3_desc2: "重复学习直到在您的头脑中整理好",
         feature_4_title: "按照自己的方式整理，轻松复习！",
         feature_4_desc1: "按章节、每日学习等整理成一个笔记",
-        feature_4_desc2: "随时可以复习"
+        feature_4_desc2: "随时可以复习",
+        download_title: "立即下载 Pikabook",
+        download_subtitle: "随时随地更智能地阅读外语"
       }
     }
   };
@@ -82,8 +88,14 @@ const resources = {
     // CTA 버튼
     document.getElementById("cta-ios").innerHTML = i18next.t("cta_ios");
     document.getElementById("cta-android").innerHTML = i18next.t("cta_android");
-    document.getElementById("cta-ios-footer").innerHTML = i18next.t("cta_ios");
-    document.getElementById("cta-android-footer").innerHTML = i18next.t("cta_android");
+    
+    // 다운로드 섹션
+    if (document.getElementById("download_title")) {
+      document.getElementById("download_title").innerHTML = i18next.t("download_title");
+    }
+    if (document.getElementById("download_subtitle")) {
+      document.getElementById("download_subtitle").innerHTML = i18next.t("download_subtitle");
+    }
     
     // 피처 섹션
     updateFeature("feature_1", "feature_1_title", "feature_1_desc1", "feature_1_desc2");
@@ -109,4 +121,33 @@ const resources = {
   document.getElementById("languageSwitcher").addEventListener("change", function(e) {
     i18next.changeLanguage(e.target.value, updateContent);
   });
+  
+  // 스크롤 애니메이션
+  const fadeElements = document.querySelectorAll('.section-fade');
+  
+  // 처음 로드 시 첫 번째 섹션(Hero)은 즉시 보이게 처리
+  setTimeout(() => {
+    if (fadeElements.length > 0) {
+      fadeElements[0].classList.add('visible');
+    }
+  }, 100);
+  
+  // 스크롤 이벤트 처리 함수
+  function checkFade() {
+    const triggerBottom = window.innerHeight * 0.8;
+    
+    fadeElements.forEach(element => {
+      const elementTop = element.getBoundingClientRect().top;
+      
+      if (elementTop < triggerBottom) {
+        element.classList.add('visible');
+      }
+    });
+  }
+  
+  // 초기 확인
+  checkFade();
+  
+  // 스크롤 이벤트 리스너
+  window.addEventListener('scroll', checkFade);
 });
