@@ -11,30 +11,6 @@ const resources = {
         feature_3: "<strong>플래시카드로 반복학습을 손쉽게!</strong><br/>어려운 단어는 플래시카드로 저장해요<br/>머릿속에 정리될 때까지 반복 학습해요",
         feature_4: "<strong>내 방식대로 정리해 손쉽게 복습하기!</strong><br/>챕터별, 일일 학습별 등 내 방식대로 하나의 노트로 정리해요<br/>언제든 다시 볼 수 있어요"
       }
-    },
-    en: {
-      translation: {
-        headline: "Smart way to study with original texts",
-        subheadline: "Not sure where to start with foreign books?",
-        cta: "Download the App",
-        features_title: "How Pikabook helps you",
-        feature_1: "<strong>Translate instantly from any photo</strong><br/>Books, notes, signs... just snap and translate!<br/>AI-powered OCR makes reading effortless",
-        feature_2: "<strong>Turn images into smart study notes!</strong><br/>Get translation, pinyin and dictionary lookups with ease",
-        feature_3: "<strong>Review with flashcards easily!</strong><br/>Save hard words as flashcards<br/>Review until it sticks in your mind",
-        feature_4: "<strong>Organize your way, review anytime!</strong><br/>Group by chapter or day — make your own notes<br/>Come back anytime to review"
-      }
-    },
-    zh: {
-      translation: {
-        headline: "原版书学习，更聪明",
-        subheadline: "不知道如何开始学原版书？",
-        cta: "下载应用",
-        features_title: "Pikabook 如何帮助你",
-        feature_1: "<strong>拍照即翻译</strong><br/>书本、笔记、路牌… 拍一张就能翻译！<br/>AI 文字识别快速准确",
-        feature_2: "<strong>图片变成智能学习笔记！</strong><br/>翻译、拼音、词典查阅一键完成",
-        feature_3: "<strong>用闪卡轻松复习！</strong><br/>难词加入闪卡<br/>反复学习直到掌握",
-        feature_4: "<strong>按你方式整理笔记，随时复习！</strong><br/>按章节、按日期分组都可以<br/>想复习就能看"
-      }
     }
   };
   
