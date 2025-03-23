@@ -6,72 +6,7 @@ body {
     color: #222;
     line-height: 1.6;
   }
-  .logo {
-    width: 140px;
-    height: auto;
-  }
-  .hero-img {
-    width: 100%;
-    max-width: 600px;
-    display: block;
-    margin: 0 auto;
-  }
-  .cta-buttons {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    margin-top: 30px;
-  }
-  .cta {
-    background: #FE6A15;
-    color: #fff;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 8px;
-    font-size: 1.1rem;
-    font-weight: 500;
-    transition: transform 0.3s, background 0.3s;
-  }
-  .cta:hover {
-    transform: translateY(-3px);
-    background: #e55a05;
-  }
-  
-  /* Wiser 스타일 메인 CTA 버튼 */
-  .main-cta-button {
-    display: inline-block;
-    background-color: #0066cc;
-    color: white;
-    text-decoration: none;
-    padding: 18px 48px;
-    font-size: 1.2rem;
-    font-weight: 600;
-    border-radius: 50px;
-    margin-top: 30px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 102, 204, 0.4);
-    text-align: center;
-  }
-  
-  .main-cta-button:hover {
-    background-color: #0055aa;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0, 102, 204, 0.5);
-  }
-  
-  footer {
-    text-align: center;
-    padding: 40px 0;
-    background: #222;
-    color: #fff;
-  }
-  footer .cta-buttons {
-    margin-bottom: 40px;
-  }
-  footer p {
-    font-size: 14px;
-    color: #aaa;
-  }
+
   
   header {
     position: fixed;
@@ -90,10 +25,22 @@ body {
     transition: all 0.3s ease;
   }
   
-  header.scrolled .logo {
-    filter: brightness(0) invert(1);
+  .logo-white {
+    display: block;
+    width: 140px;
+  }
+  .logo-orange {
+    display: none;
+    width: 140px;
   }
   
+  header.scrolled .logo-white {
+    display: none;
+  }
+  header.scrolled .logo-orange {
+    display: block;
+  }
+
   #languageSwitcher {
     padding: 10px 15px;
     border: none;
@@ -163,8 +110,7 @@ body {
   }
   
   .hero-logo {
-    width: 250px;
-    margin-bottom: 30px;
+    width: 350px;
   }
   
   h1 {
@@ -176,8 +122,10 @@ body {
   }
   
   .subheadline {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
+    font-size: 2rem;
+    margin-top: 10px;
+    margin-bottom: 3rem;
+    font-weight:400;
   }
   
   /* 앱 스토어 배지 */
@@ -193,13 +141,12 @@ body {
   .play-store-badge {
     position: relative;
     transition: all 0.3s ease;
-    height: 50px;
   }
   
   .app-store-badge img,
   .play-store-badge img {
-    height: 60px !important;
-    width: auto;
+    height: 60px;
+    width: auto !important;
     object-fit: contain;
     transition: transform 0.3s ease;
   }
@@ -267,27 +214,28 @@ body {
   }
   
   .feature-content p {
-    font-size: 1.2rem;
-    color: #555;
-    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #666;
   }
   
   /* 다운로드 섹션 - 기존 디자인 */
   .download-section {
     padding: 100px 5%;
     text-align: center;
-    background-color: #f9f9f9;
+    background-color: #226357;
   }
   
   .download-section h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #333;
+    color: #ffffff;
   }
   
   .download-section p {
     font-size: 1.2rem;
-    color: #555;
+    color: #ffffff;
     margin-bottom: 40px;
     max-width: 700px;
     margin-left: auto;
@@ -335,11 +283,8 @@ body {
       flex-direction: column;
       align-items: center;
     }
-    
-    .app-store-badge img,
-    .play-store-badge img {
-      height: 60px !important;
+  
     }
-  }
+  
   
   

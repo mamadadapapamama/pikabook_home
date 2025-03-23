@@ -8,7 +8,7 @@ const resources = {
         feature_1_title: "사진만 있다면, 즉시 번역",
         feature_1_desc1: "원서 공부, 첫페이지부터 막막하셨죠?",
         feature_1_desc2: "페이지 사진만 있으면 즉시 번역해 드려요.",
-        feature_2_title: "원서교재를 스마트 교재로",
+        feature_2_title: "원서 교재를 스마트 교재로",
         feature_2_desc1: "번거로왔던 사전찾기, 비슷한 구조의 문장 찾기,",
         feature_2_desc2: "이제 피카북에서 손쉽게 하세요",
         feature_3_title: "플래시카드로 반복학습을 손쉽게!",
@@ -18,7 +18,7 @@ const resources = {
         feature_4_desc1: "챕터별, 일일 학습 분량 별 등 내 방식대로 정리해",
         feature_4_desc2: "언제든 다시 볼 수 있어요",
         download_title: "지금 바로 피카북을 다운로드하세요",
-        download_subtitle: "언제 어디서나 외국어 읽기를 더 스마트하게"
+        download_subtitle: "종이책을 스마트한 학습툴로, Pikabook"
       }
     },
     en: {
@@ -74,19 +74,30 @@ const resources = {
   
   function updateContent() {
     // 헤드라인 및 서브헤드라인
-    document.getElementById("headline").innerHTML = i18next.t("headline");
+    const headlineElement = document.getElementById("headline");
+    if (headlineElement) {
+      headlineElement.innerHTML = i18next.t("headline");
+    }
+    
     const subheadlineElement = document.getElementById("subheadline");
     if (subheadlineElement) {
       subheadlineElement.innerHTML = i18next.t("subheadline");
     }
-    document.getElementById("features_title").innerHTML = i18next.t("features_title");
+    
+    const featuresTitleElement = document.getElementById("features_title");
+    if (featuresTitleElement) {
+      featuresTitleElement.innerHTML = i18next.t("features_title");
+    }
     
     // 다운로드 섹션
-    if (document.getElementById("download_title")) {
-      document.getElementById("download_title").innerHTML = i18next.t("download_title");
+    const downloadTitleElement = document.getElementById("download_title");
+    if (downloadTitleElement) {
+      downloadTitleElement.innerHTML = i18next.t("download_title");
     }
-    if (document.getElementById("download_subtitle")) {
-      document.getElementById("download_subtitle").innerHTML = i18next.t("download_subtitle");
+    
+    const downloadSubtitleElement = document.getElementById("download_subtitle");
+    if (downloadSubtitleElement) {
+      downloadSubtitleElement.innerHTML = i18next.t("download_subtitle");
     }
     
     // 피처 섹션
