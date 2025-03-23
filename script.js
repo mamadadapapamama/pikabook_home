@@ -4,19 +4,18 @@ const resources = {
     ko: {
       translation: {
         headline: "원서공부, 스마트하게",
-        subheadline: "원서공부, 어디서부터 시작할지 막막하셨죠?",
         features_title: "피카북은 이렇게 도와줘요",
-        feature_1_title: "사진만 있으면 바로 번역",
-        feature_1_desc1: "책, 노트, 간판… 어디서든 사진을 찍으면 즉시 번역!",
-        feature_1_desc2: "AI 기반 텍스트 인식으로 쉽고 빠르게 텍스트를 번역하세요",
-        feature_2_title: "이미지가 스마트한 학습 노트로!",
-        feature_2_desc1: "번역, 한어병음을 만들어줘요",
-        feature_2_desc2: "손쉽게 사전 검색을 할 수 있어요",
+        feature_1_title: "사진만 있다면, 즉시 번역",
+        feature_1_desc1: "원서 공부, 첫페이지부터 막막하셨죠?",
+        feature_1_desc2: "페이지 사진만 있으면 즉시 번역해 드려요.",
+        feature_2_title: "원서교재를 스마트 교재로",
+        feature_2_desc1: "번거로왔던 사전찾기, 비슷한 구조의 문장 찾기,",
+        feature_2_desc2: "이제 피카북에서 손쉽게 하세요",
         feature_3_title: "플래시카드로 반복학습을 손쉽게!",
         feature_3_desc1: "어려운 단어는 플래시카드로 저장해요",
         feature_3_desc2: "머릿속에 정리될 때까지 반복 학습해요",
-        feature_4_title: "내 방식대로 정리해 손쉽게 복습하기!",
-        feature_4_desc1: "챕터별, 일일 학습별 등 내 방식대로 하나의 노트로 정리해요",
+        feature_4_title: "내 방식대로 정리해 손쉽게 복습",
+        feature_4_desc1: "챕터별, 일일 학습 분량 별 등 내 방식대로 정리해",
         feature_4_desc2: "언제든 다시 볼 수 있어요",
         download_title: "지금 바로 피카북을 다운로드하세요",
         download_subtitle: "언제 어디서나 외국어 읽기를 더 스마트하게"
@@ -59,7 +58,7 @@ const resources = {
         feature_3_desc2: "重复学习直到在您的头脑中整理好",
         feature_4_title: "按照自己的方式整理，轻松复习！",
         feature_4_desc1: "按章节、每日学习等整理成一个笔记",
-        feature_4_desc2: "随时可以复习",
+        feature_4_desc2: "按章节、每日学习等整理成一个笔记",
         download_title: "立即下载 Pikabook",
         download_subtitle: "随时随地更智能地阅读外语"
       }
@@ -143,4 +142,13 @@ const resources = {
   
   // 스크롤 이벤트 리스너
   window.addEventListener('scroll', checkFade);
+  
+  window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    if (window.scrollY > 50) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
 });
