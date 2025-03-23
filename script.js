@@ -76,7 +76,10 @@ const resources = {
   function updateContent() {
     // 헤드라인 및 서브헤드라인
     document.getElementById("headline").innerHTML = i18next.t("headline");
-    document.getElementById("subheadline").innerHTML = i18next.t("subheadline");
+    const subheadlineElement = document.getElementById("subheadline");
+    if (subheadlineElement) {
+      subheadlineElement.innerHTML = i18next.t("subheadline");
+    }
     document.getElementById("features_title").innerHTML = i18next.t("features_title");
     
     // 다운로드 섹션
