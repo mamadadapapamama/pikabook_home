@@ -224,7 +224,7 @@ body {
   .download-section {
     padding: 100px 5%;
     text-align: center;
-    background-color: #226357;
+    background-color: #FE6A15;
   }
   
   .download-section h2 {
@@ -234,7 +234,7 @@ body {
   }
   
   .download-section p {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: #ffffff;
     margin-bottom: 40px;
     max-width: 700px;
@@ -242,31 +242,45 @@ body {
     margin-right: auto;
   }
   
-  .app-showcase {
-    max-width: 800px;
-    margin: 40px auto 0;
-    background-color: #343652;
+
+  footer {
+    background-color:#333;
+    padding: 3%;
   }
-  
-  .app-showcase img {
-    display: none;
+
+  footer p {
+    color: #fff;
+    margin:0;
   }
-  
+ 
   /* 반응형 */
   @media (max-width: 768px) {
     .hero-logo {
-        width: 200px;
+        width: 250px;
     }
     .logo {
         width: 100px;
     }
+    
+    .store-buttons {
+      gap: 10px;
+      margin-top: 30px;
+    }
+          
+    .app-store-badge img,
+    .play-store-badge img {
+      width: 180px !important;
+      height: auto !important;
+     }
+    
     h1 {
         font-size: 30px;
         font-weight: 500;
     }
     
+
     .subheadline {
-      font-size: 1.2rem;
+      font-size: 1.4rem;
     }
     
     .feature-section {
@@ -282,9 +296,6 @@ body {
     .store-buttons {
       flex-direction: column;
       align-items: center;
-    }
-  
-    }
-  
-  
-  
+    }   
+  }
+ 
