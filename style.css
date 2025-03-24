@@ -289,6 +289,14 @@ body {
       gap: 30px;
     }
     
+    .feature-content h3 {
+      font-size: 1.7rem;
+    }
+
+    .feature-content p {
+      font-size: 1rem;
+    }
+    
     .feature-image {
       max-width: 100%;
     }
