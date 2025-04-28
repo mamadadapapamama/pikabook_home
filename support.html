@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지원 - Support</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #000000;
+        }
+        header {
+            background: #181818;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        header h1 {
+            color: white;
+        }
+        main {
+            padding: 2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        label {
+            display: block;
+            margin: 1.5rem 0 0.5rem;
+            font-weight: bold;
+        }
+        input, textarea, button {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        button {
+            background: #181818;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button:hover {
+            background: #333;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background: #181818;
+            color: white;
+            margin-top: 2rem;
+        }
+        p.description {
+            margin-bottom: 2rem;
+            color: #555;
+            font-size: 1rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>지원 - Support</h1>
+    </header>
+    <main>
+        <p class="description">
+            질문, 피드백 또는 지원이 필요하시면 아래 양식을 작성해 주세요. 가능한 한 빨리 답변 드리겠습니다.<br>
+            If you have any questions, feedback, or need assistance, please fill out the form below. 
+            We will respond to your inquiry as soon as possible.
+        </p>
+        <form action="mailto:support@pikabook.com" method="post" enctype="text/plain">
+            <label for="email">이메일 - Your Email</label>
+            <input type="email" id="email" name="email" placeholder="이메일 주소를 입력하세요 - Enter your email" required>
+            
+            <label for="message">메시지 내용 - Message</label>
+            <textarea id="message" name="message" rows="6" placeholder="문의 내용을 작성하세요 - Enter your message" required></textarea>
+            
+            <button type="submit">메시지 전송 - Send Message</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2025 Pikabook. All rights reserved.</p>
+    </footer>
+</body>
+</html>
