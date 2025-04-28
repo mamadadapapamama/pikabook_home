@@ -34,14 +34,17 @@
             margin: 1.5rem 0 0.5rem;
             font-weight: bold;
         }
-        input, textarea, button {
+         input, textarea {
+            font-family: Arial, sans-serif; /* 동일한 폰트 */
+            font-size: 16px; /* 동일한 폰트 크기 */
+            line-height: 1.5; /* 동일한 줄 간격 */
+            color: #333; /* 동일한 텍스트 색상 */
+            padding: 0.75rem; /* 동일한 여백 */
+            border: 1px solid #ddd; /* 동일한 테두리 */
+            border-radius: 5px; /* 동일한 모서리 둥글기 */
             width: 100%;
-            padding: 0.75rem;
             margin-bottom: 1rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
+         }
         button {
             background: #181818;
             color: white;
@@ -78,10 +81,10 @@
         </p>
         <form action="mailto:support@pikabook.com" method="post" enctype="text/plain">
             <label for="email">Your Email</label>
-            <input type="email" id="email" name="email" placeholder="이메일 주소를 입력하세요 - Enter your email" required>
+            <input type="email" id="email" name="email" required>
             
             <label for="message">Message</label>
-            <textarea id="message" name="message" rows="6" placeholder="문의 내용을 작성하세요 - Enter your message" required></textarea>
+            <textarea id="message" name="message" rows="6" required></textarea>
             
             <button type="submit">Send</button>
         </form>
