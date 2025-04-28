@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개인정보 처리방침 - Pikabook</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #000000;
+        }
+        header {
+            background: #000000;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        header h1 {
+            color: white;
+        }
+        main {
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #000000;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background: #000000;
+            color: #000000;
+            margin-top: 2rem;
+        }
+        a {
+            color: #000000;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        #language-toggle {
+            display: block;
+            margin: 1rem auto;
+            padding: 0.5rem 1rem;
+            background: #000000;
+            color: white;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+        }
+    </style>
+    <script>
+        function toggleLanguage() {
+            const koreanContent = document.getElementById('korean-content');
+            const englishContent = document.getElementById('english-content');
+            const button = document.getElementById('language-toggle');
+
+            if (koreanContent.style.display === 'none') {
+                koreanContent.style.display = 'block';
+                englishContent.style.display = 'none';
+                button.textContent = 'Switch to English';
+            } else {
+                koreanContent.style.display = 'none';
+                englishContent.style.display = 'block';
+                button.textContent = '한국어로 전환';
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Pikabook 개인정보 처리방침</h1>
+    </header>
+    <main>
+        <button id="language-toggle" onclick="toggleLanguage()">Switch to English</button>
+
+        <div id="korean-content">
+            <section>
+                <h2>1. 수집하는 정보</h2>
+                <ul>
+                    <li>이메일 주소 (로그인 및 사용자 식별을 위해 사용)</li>
+                    <li>업로드된 이미지 (텍스트 추출 및 번역 기능에 사용됨)</li>
+                    <li>학습 기록 및 즐겨찾기 (플래시카드, 노트 정리용)</li>
+                </ul>
+            </section>
+            <section>
+                <h2>2. 정보 수집 목적</h2>
+                <ul>
+                    <li>로그인 및 사용자 인증</li>
+                    <li>이미지에서 텍스트 추출 및 번역</li>
+                    <li>학습 콘텐츠 저장 및 복습 기능 제공</li>
+                </ul>
+            </section>
+            <section>
+                <h2>3. 외부 서비스 사용</h2>
+                <ul>
+                    <li>Firebase Authentication (사용자 로그인)</li>
+                    <li>Firebase Firestore (사용자 데이터 저장)</li>
+                </ul>
+            </section>
+            <section>
+                <h2>4. 정보 보관 기간</h2>
+                <p>사용자가 서비스를 이용하는 동안 보관되며, 탈퇴 시 삭제됩니다.</p>
+            </section>
+            <section>
+                <h2>5. 제3자 제공</h2>
+                <p>Pikabook은 수집된 정보를 제3자에게 제공하지 않습니다.</p>
+            </section>
+            <section>
+                <h2>6. 사용자 권리</h2>
+                <p>사용자는 언제든지 자신의 데이터를 열람, 수정, 삭제할 수 있습니다.</p>
+            </section>
+            <section>
+                <h2>7. 문의</h2>
+                <p>서비스 이용과 관련된 문의사항은 아래 이메일로 연락 바랍니다.</p>
+                <p>📧 <a href="mailto:hello.pikabook@gmail.com">hello.pikabook@gmail.com</a></p>
+            </section>
+        </div>
+
+        <div id="english-content" style="display: none;">
+            <section>
+                <h2>1. Information We Collect</h2>
+                <ul>
+                    <li><strong>Email address</strong> (used for login and user identification)</li>
+                    <li><strong>Uploaded images</strong> (used for text extraction and translation features)</li>
+                    <li><strong>Study history and saved items</strong> (such as flashcards and notes)</li>
+                </ul>
+            </section>
+            <section>
+                <h2>2. Purpose of Data Collection</h2>
+                <ul>
+                    <li>To authenticate users and provide login functionality</li>
+                    <li>To extract and translate text from uploaded images</li>
+                    <li>To save and manage user’s learning content</li>
+                </ul>
+            </section>
+            <section>
+                <h2>3. Use of Third-Party Services</h2>
+                <p>Pikabook uses the following services:</p>
+                <ul>
+                    <li><strong>Firebase Authentication</strong> (for user login)</li>
+                    <li><strong>Firebase Firestore</strong> (to store user data)</li>
+                </ul>
+            </section>
+            <section>
+                <h2>4. Data Retention</h2>
+                <p>We retain your data as long as your account is active. If you delete your account, your data will be permanently removed.</p>
+            </section>
+            <section>
+                <h2>5. Third-Party Disclosure</h2>
+                <p>We do <strong>not</strong> share your personal information with any third parties.</p>
+            </section>
+            <section>
+                <h2>6. User Rights</h2>
+                <p>You have the right to access, modify, or delete your personal data at any time.</p>
+            </section>
+            <section>
+                <h2>7. Contact</h2>
+                <p>If you have any questions or concerns, please contact us at:</p>
+                <p>📧 <a href="mailto:hello.pikabook@gmail.com">hello.pikabook@gmail.com</a></p>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Pikabook. All rights reserved.</p>
+    </footer>
+</body>
+</html>
