@@ -6,34 +6,26 @@
   <title>Pikabook</title>
   <link rel="stylesheet" href="./style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/i18next@22.4.9/i18next.min.js"></script>
   <!--favicon-->
   <link rel="icon" href="./assets/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32.png">
-  
 </head>
+
 <body>
-  <div style="width:100%; background:#FFF7EE; padding: 20px 0 12px 0; text-align:center; font-size:1.25rem; font-family:'Poppins',sans-serif; font-weight:500;">
-    <span style="font-size:1.3em;">🚀</span> <span style="color:#FF7A00; font-weight:700;">5월 31일까지</span>, 베타 체험단이 되어 피카북을 무료로 체험해 보세요! 
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdsY34fCN2_0TPl3X-3lUBlhcbopu7Qco2iB8OGtB-c8R4Lsw/viewform" target="_blank" style="color:#FF7A00; text-decoration:none; font-weight:500; margin-left:8px;">알아보기</a>
+  <div class="beta-banner">
+    <span class="beta-banner-emoji">🚀</span> <span class="beta-banner-highlight">5월 31일까지</span>, 베타 체험단이 되어 피카북을 무료로 체험해 보세요! 
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdsY34fCN2_0TPl3X-3lUBlhcbopu7Qco2iB8OGtB-c8R4Lsw/viewform" target="_blank" class="beta-banner-link">알아보기</a>
   </div>
   <header>
     <img src="./assets/Pikabook_textlogo_white.svg" alt="Pikabook 로고백색" class="logo-white" />
-    <img src="./assets/Pikabook_textlogo_orange.svg" alt="Pikabook 로고주황" class="logo-orange" />
-
-    <select id="languageSwitcher">
-      <option value="ko">한국어</option>
-      <option value="en">English</option>
-      <option value="zh">中文</option>
-    </select>
   </header>
 
   <main>
     <section class="hero section-fade">
       <div class="hero-content">
         <img src="./assets/pikabook_logo.svg" alt="Pikabook" class="hero-logo" />
-        <h3 id="headline" class="subheadline"></h3>
+        <h3 class="subheadline">책으로 하는 중국어 공부, 스마트하게</h3>
         <div class="store-buttons">
           <a href="https://apps.apple.com/sg/app/pikabook/id6745157690" class="app-store-badge">
             <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store" />
@@ -49,9 +41,9 @@
         </div>
         <div class="feature-content">
           <div id="feature_1">
-            <h3>dummy</h3>
-            <p>dummy</p>
-            <p>dummy</p>
+            <h3>사진만 있다면, 즉시 번역</h3>
+            <p>원서 공부, 첫페이지부터 막막하셨죠?</p>
+            <p>페이지 사진만 있으면 즉시 번역해 드려요.</p>
           </div>
         </div>
       </div>
@@ -62,9 +54,9 @@
         </div>
         <div class="feature-content">
           <div id="feature_2">
-            <h3>dummy</h3>
-            <p>dummy</p>
-            <p>dummy</p>
+            <h3>종이책을 스마트 교재로</h3>
+            <p>번거로왔던 사전 찾기, 발음 확인하기,</p>
+            <p>이제 피카북에서 손쉽게 하세요</p>
           </div>
         </div>
       </div>
@@ -75,9 +67,9 @@
         </div>
         <div class="feature-content">
           <div id="feature_3">
-            <h3>dummy</h3>
-            <p>dummy</p>
-            <p>dummy</p>
+            <h3>플래시카드로 반복학습을 손쉽게!</h3>
+            <p>어려운 단어는 플래시카드로 저장해요</p>
+            <p>머릿속에 정리될 때까지 반복 학습해요</p>
           </div>
         </div>
       </div>
@@ -97,22 +89,23 @@
     </section>
 
     <section id="download" class="download-section section-fade">
-      <h2 id="download_title">지금 바로 피카북을 다운로드하세요</h2>
-      <p id="download_subtitle">언제 어디서나 원서 공부를 더 스마트하게</p>
+      <h2>지금 바로 피카북을 다운로드하세요</h2>
+      <p>언제 어디서나 원서 공부를 더 스마트하게</p>
       
       <div class="store-buttons">
         <a href="https://apps.apple.com/sg/app/pikabook/id6745157690" class="app-store-badge">
           <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store" />
         </a>
       </div>
+    </section>
   </main>
 
- <footer style="display: flex; justify-content: center; align-items: center; padding: 40px 0; background: #181818;">
+  <footer style="display: flex; justify-content: center; align-items: center; padding: 40px 0; background: #181818;">
     <p style="margin: 0; color: #B2B2B2; padding: 0 20px;">&copy; 2025 Pikabook</p>
     <p style="margin: 0; padding: 0 10px;">
       <a href="./privacy.html" target="_blank" style="color: #B2B2B2; text-decoration: underline;">Privacy Policy</a>
     </p>
-  <p style="margin: 0; padding: 0 10px;">
+    <p style="margin: 0; padding: 0 10px;">
       <a href="./support.html" target="_blank" style="color: #B2B2B2; text-decoration: underline;">Contact us</a>
     </p>
   </footer>
