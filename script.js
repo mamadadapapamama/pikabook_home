@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
 const resources = {
     ko: {
       translation: {
-        headline: "원서공부, 스마트하게",
+        headline: "책으로 하는 중국어 공부, 스마트하게",
         features_title: "피카북은 이렇게 도와줘요",
         feature_1_title: "사진만 있다면, 즉시 번역",
         feature_1_desc1: "원서 공부, 첫페이지부터 막막하셨죠?",
