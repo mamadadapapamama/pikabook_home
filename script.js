@@ -9,7 +9,7 @@ const resources = {
         feature_1_desc1: "원서 공부, 첫페이지부터 막막하셨죠?",
         feature_1_desc2: "페이지 사진만 있으면 즉시 번역해 드려요.",
         feature_2_title: "종이책을 스마트 교재로",
-        feature_2_desc1: "번거로왔던 사전찾기, 발음 확인하기,",
+        feature_2_desc1: "번거로왔던 사전 찾기, 발음 확인하기,",
         feature_2_desc2: "이제 피카북에서 손쉽게 하세요",
         feature_3_title: "플래시카드로 반복학습을 손쉽게!",
         feature_3_desc1: "어려운 단어는 플래시카드로 저장해요",
