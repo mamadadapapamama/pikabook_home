@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Link from "next/link";
 import { AnimateOnScroll } from "@/components/AnimateOnScroll";
 
 const APP_STORE_URL = "https://apps.apple.com/sg/app/pikabook/id6745157690";
@@ -14,9 +16,9 @@ export default function Home() {
         </AnimateOnScroll>
         <h1 className="mx-auto max-w-3xl text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-6xl">
           <AnimateOnScroll delay={100}>
-            Chinese is hard. We get it.
+            Chinese is hard. I know.
             <br />
-            <span className="text-amber-600">Pikabook</span> makes it readable and speakable.
+            That's why <span className="text-amber-600">Pikabook</span> makes it easier to read and speak.
           </AnimateOnScroll>
         </h1>
         <div className="mt-12 flex flex-col items-center gap-4 sm:flex-row">
@@ -35,10 +37,20 @@ export default function Home() {
             <p className="text-sm text-zinc-500">Android coming soon</p>
           </AnimateOnScroll>
         </div>
+        <AnimateOnScroll delay={300} className="mt-16 w-full max-w-md px-4 sm:max-w-lg md:max-w-xl lg:max-w-2xl">
+          <Image
+            src="/images/hero.png"
+            alt="Pikabook app on phone with Chinese learning content"
+            width={600}
+            height={780}
+            className="mx-auto w-full object-contain"
+            priority
+          />
+        </AnimateOnScroll>
       </header>
 
       {/* Section 1: Key features */}
-      <section className="border-t border-zinc-200 bg-zinc-50/50 px-6 py-24" aria-labelledby="features-heading">
+      <section className="border-t border-zinc-200 px-6 py-24" style={{ backgroundColor: "#FFFAF4" }} aria-labelledby="features-heading">
         <div className="mx-auto max-w-3xl text-center">
           <h2 id="features-heading" className="text-2xl font-semibold text-zinc-900 sm:text-3xl">
             <AnimateOnScroll>
@@ -46,33 +58,50 @@ export default function Home() {
             </AnimateOnScroll>
           </h2>
         </div>
-        <ul className="mx-auto mt-16 grid max-w-4xl gap-12 sm:grid-cols-1 md:grid-cols-2">
+        <ul className="mx-auto mt-16 max-w-5xl space-y-16">
           {[
+            // Replace image with /features/feature-1.png … feature-5.png when you have assets
             {
               title: "Study YOUR Chinese book",
               body: "You don't need to start with '你好'. Dive straight into any book, right where you left off.",
+              image: "/features/placeholder.svg",
             },
             {
               title: "Learn line by line",
               body: "Get accurate translations and Pinyin, sentence by sentence. If you want a quick translation, you can also learn paragraph by paragraph.",
+              image: "/features/placeholder.svg",
             },
             {
               title: "Real voices, not robots",
               body: "Listen to native speakers at your own pace—with both natural and slowed-down versions.",
+              image: "/features/placeholder.svg",
             },
             {
               title: "Build vocabulary as you read",
               body: "Save new words into flashcard - you can read it, hear it, say it, anytime.",
+              image: "/features/placeholder.svg",
             },
             {
               title: "Instant pronunciation feedback",
               body: "Record yourself and get real-time analysis. Know exactly where to improve.",
+              image: "/features/placeholder.svg",
             },
           ].map((item, i) => (
-            <li key={item.title}>
-              <AnimateOnScroll delay={i * 80}>
-                <h3 className="text-lg font-semibold text-zinc-900">{item.title}</h3>
-                <p className="mt-2 text-zinc-600">{item.body}</p>
+            <li key={item.title} className="flex flex-col gap-6 md:flex-row md:items-center md:gap-10">
+              <AnimateOnScroll delay={i * 80} className="md:order-2 md:flex-1">
+                <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-amber-100/80 md:aspect-[4/3]">
+                  <Image
+                    src={item.image}
+                    alt=""
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                </div>
+              </AnimateOnScroll>
+              <AnimateOnScroll delay={i * 80 + 50} className="md:order-1 md:flex-1">
+                <h2 className="text-xl font-semibold text-zinc-900 sm:text-2xl">{item.title}</h2>
+                <p className="mt-2 text-base text-zinc-600 sm:text-lg">{item.body}</p>
               </AnimateOnScroll>
             </li>
           ))}
@@ -144,8 +173,23 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="border-t border-zinc-200 px-6 py-8 text-center text-sm text-zinc-500">
-        <p>© Pikabook. All rights reserved.</p>
+      <footer className="border-t border-zinc-200 px-6 py-12">
+        <div className="mx-auto flex max-w-2xl flex-col items-center gap-8 sm:flex-row sm:justify-between sm:items-start">
+          <p className="text-sm text-zinc-500">© 2026 Pikabook. All rights reserved.</p>
+          <nav className="flex flex-col items-center gap-4 sm:flex-row sm:items-end sm:gap-6">
+            <a
+              href="https://www.pikabook.co/privacy.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-zinc-600 underline hover:text-zinc-900"
+            >
+              Privacy policy
+            </a>
+            <Link href="/contact" className="text-sm text-zinc-600 underline hover:text-zinc-900">
+              Contact us
+            </Link>
+          </nav>
+        </div>
       </footer>
     </div>
   );
