@@ -209,8 +209,8 @@ export default function Home() {
             <div className="mt-4 space-y-3 text-white/95">
               <AnimateOnScroll delay={50}>
                 <p>
-                  Pikabook subscription launches next week. Join our Open Beta now and receive 1 month of free access
-                  instead of the standard 1-week trial.
+                  Pikabook subscription launches in Mar 2026. Join our Open Beta now and receive 1 month of free access
+                  instead of the standard 1-week trial!
                 </p>
               </AnimateOnScroll>
               <AnimateOnScroll delay={100}>
