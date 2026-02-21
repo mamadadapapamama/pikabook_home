@@ -10,6 +10,7 @@ type Props = {
 
 export function AnimateOnScroll({ children, className = "", delay = 0 }: Props) {
   const ref = useRef<HTMLDivElement>(null);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -18,14 +19,16 @@ export function AnimateOnScroll({ children, className = "", delay = 0 }: Props) 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          const t = setTimeout(() => setVisible(true), delay);
-          return () => clearTimeout(t);
+          timeoutRef.current = setTimeout(() => setVisible(true), delay);
         }
       },
       { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
     );
     observer.observe(el);
-    return () => observer.disconnect();
+    return () => {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+      observer.disconnect();
+    };
   }, [delay]);
 
   return (

@@ -64,7 +64,7 @@ export default function Home() {
         </div>
         <AnimateOnScroll delay={300} className="mt-16 w-full max-w-md px-4 sm:max-w-lg md:max-w-xl lg:max-w-2xl">
           <Image
-            src="/images/hero.avif"
+            src="/images/hero-2.avif"
             alt="Pikabook app on phone with Chinese learning content"
             width={600}
             height={780}
@@ -118,7 +118,7 @@ export default function Home() {
                   >
                     <Image
                       src={item.image}
-                      alt=""
+                      alt={item.title}
                       fill
                       className={i === 0 ? "object-contain" : "object-cover"}
                       sizes="(max-width: 768px) 100vw, 50vw"
@@ -128,14 +128,17 @@ export default function Home() {
                 <AnimateOnScroll delay={i * 80 + 50} className={`md:flex-1 ${imageFirst ? "md:order-2" : "md:order-1"}`}>
                   <h2 className="text-2xl font-bold text-zinc-900 sm:text-3xl md:text-[1.3rem] lg:text-[2.0rem]">
                     {"highlightWord" in item && item.highlightWord
-                      ? item.title.split(item.highlightWord).map((part, j) => (
-                          <span key={j}>
-                            {part}
-                            {j < item.title.split(item.highlightWord).length - 1 && (
-                              <span style={{ color: item.highlightColor }}>{item.highlightWord}</span>
-                            )}
-                          </span>
-                        ))
+                      ? (() => {
+                          const parts = item.title.split(item.highlightWord);
+                          return parts.map((part, j) => (
+                            <span key={j}>
+                              {part}
+                              {j < parts.length - 1 && (
+                                <span style={{ color: item.highlightColor }}>{item.highlightWord}</span>
+                              )}
+                            </span>
+                          ));
+                        })()
                       : item.title}
                   </h2>
                   <p className="mt-4 text-base text-zinc-600 sm:mt-5 sm:text-lg md:text-[1.125rem] lg:text-xl">
