@@ -24,9 +24,15 @@ export default async function AndroidBetaPage({ searchParams }: Props) {
           Please register your interest with us - we will send you the open beta link as soon as it&apos;s ready.
         </p>
         {submitted && (
-          <p className="mt-4 rounded-lg bg-green-50 p-4 text-green-800">
-            Thanks for registering. We&apos;ll be in touch shortly.
-          </p>
+          <div className="mt-4 rounded-lg bg-green-50 p-4 text-green-800">
+            <p>Thanks for registering. We&apos;ll be in touch shortly.</p>
+            <Link
+              href="/"
+              className="mt-3 inline-block rounded-lg bg-green-700 px-4 py-2 text-sm font-medium text-white hover:bg-green-800"
+            >
+              Back to home
+            </Link>
+          </div>
         )}
         <AndroidBetaForm />
       </div>
